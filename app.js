@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const professionalRoutes = require('./routes/professional');
+
 const app = express();
 
 /* middleware */
@@ -12,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 /* route */
-app.use('/professional', professionalRoutes);
+app.use('./professional', professionalRoutes);
 
 
 /* server */
